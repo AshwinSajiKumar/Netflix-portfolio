@@ -1,0 +1,210 @@
+/* Navbar.css */
+
+/* Main Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  height: 68px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Remove scrolled state to maintain pure black */
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0 60px 0 0;
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  height: 60px;  /* Increased from 45px */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover img {
+  transform: scale(1.05);
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #e50914; /* Netflix red */
+}
+
+/* Profile Icon */
+.profile-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  transition: transform 0.3s, border-color 0.3s;
+  margin-right: 3rem;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid transparent;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+  border-color: #e50914;
+}
+
+/* Hide the hamburger and sidebar in desktop view */
+.hamburger,
+.sidebar-overlay,
+.sidebar {
+  display: none;
+}
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+  .navbar-logo img {
+    height: 30px;  /* Increased from 20px */
+    margin-right: auto;
+  }
+  .profile-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  /* Hide Navbar Links in Mobile */
+  .navbar-links {
+    display: none;
+  }
+
+  /* Show Hamburger Menu */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+    transition: 0.3s;
+  }
+
+  /* Sidebar Overlay */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    display: none;
+  }
+
+  .sidebar-overlay.open {
+    display: block;
+  }
+
+  /* Sidebar Styling */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    background-color: #141414;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 4;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-logo img {
+    height: 40px;  /* Increased from 30px */
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar ul li {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Close button inside the sidebar */
+  .hamburger-icon {
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
+
+  /* Sidebar adjustments */
+  .sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

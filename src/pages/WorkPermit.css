@@ -1,0 +1,136 @@
+.work-permit-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.work-permit-card {
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  width: 90%;
+  max-width: 800px;
+  min-width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #333;
+  scroll-snap-align: start;
+  margin-right: 20px;
+  position: relative;
+}
+
+.work-permit-card:last-child {
+  margin-right: 0;
+}
+
+.work-permit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.work-permit-headline {
+  font-size: 2rem;
+  color: #e50914;
+  margin-bottom: 20px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.work-permit-headline::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #e50914;
+  border-radius: 3px;
+}
+
+.work-permit-summary {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.work-permit-summary strong {
+  color: #e50914;
+  font-weight: 600;
+}
+
+.nav-buttons {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+
+.nav-button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #f40612;
+  transform: scale(1.1);
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.work-permit-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.work-permit-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.additional-info {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 20px;
+  font-style: italic;
+}
