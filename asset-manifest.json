@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Netflix-portfolio/static/css/main.5bb5c6a2.css",
+    "main.js": "/Netflix-portfolio/static/js/main.4fc93ef1.js",
+    "static/media/netflix-sound.mp3": "/Netflix-portfolio/static/media/netflix-sound.a13a4aedfb5da5a27f04.mp3",
+    "index.html": "/Netflix-portfolio/index.html",
+    "main.5bb5c6a2.css.map": "/Netflix-portfolio/static/css/main.5bb5c6a2.css.map",
+    "main.4fc93ef1.js.map": "/Netflix-portfolio/static/js/main.4fc93ef1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bb5c6a2.css",
+    "static/js/main.4fc93ef1.js"
+  ]
+}
